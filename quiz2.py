@@ -14,28 +14,14 @@ if topic == 'art':
     
 
 
-    if Q1Art == 'Leonardo Da Vinci':
+    if Q1Art == 'Leonardo Da Vinci'and Q2Art == 'Lapiz lazuli' and Q3Art == 'Chicago':
         print('Correct!')
         total_score += 1
     else:
-        print('Sorry, the answer is Leonardo Da Vinci.')
+        print('Sorry,')
     
-    Q2Art = input('What precious stone is used to make the artist\'s pigment ultramarine?')
-    if Q2Art == 'Lapiz lazuli':
-        print('Correct!')
-        total_score += 1
-    else:
-        print('Sorry, the correct answer is Lapiz lazuli.')
-
-    Q3Art = input('Anish Kapoor\'s bean-shaped Cloud Gate scuplture is a landmark of which city?')
     
-    if Q3Art == 'Chicago':
-
-        print('Correct!')
-        total_score += 1
-    else:
-        print('Sorry, the correct answer is Chicago.')
-
+    
     print('End of quiz!')
 
     print(f'Your total score on {topic} questions is {total_score} out of 3.')
@@ -46,29 +32,16 @@ if topic == 'art':
 
 elif topic == 'space':
     
-    print('Which planet is closest to the sun?')
-    answer = input('Enter your answer: ')
-    if answer == 'Mercury':
+    Q1spc = input('Which planet is closest to the sun?')
+    Q2spc = input('Which planet spins in the opposite direction to all the others in the solar system?')
+    Q3spc = input('How many moons does Mars have?')
+    
+    if Q1spc == "Mercury" and Q2spc == "Venus" and Q3spc == "2":
         print('Correct!')
         total_score += 1
     else:
-        print('Sorry, the correct answer is Mercury.')
+        print('Sorry, wrong')
 
-    print('Which planet spins in the opposite direction to all the others in the solar system?')
-    answer = input('Enter your answer: ')
-    if answer == 'Venus':
-        print('Correct!')
-        total_score += 1
-    else:
-        print('Sorry, the correct answer is Venus.')
-
-    print('How many moons does Mars have?')
-    answer = input('Enter your answer: ')
-    if answer == '2':   
-        print('Correct!')
-        total_score += 1
-    else:
-        print('Sorry, the correct answer is 2.')
 
     print('End of quiz!')
     print(f'Your total score on {topic} questions is {total_score} out of 3.')
