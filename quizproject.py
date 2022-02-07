@@ -1,7 +1,6 @@
 """ This program is a trivia quiz program. The user selects a topic, and then is challenged to answer quiz questions 
 on that topic. If the user gets a question correct, they see a 'Correct!' message. If their answer is incorrect, they see a message 
 with the correct answer. After the user has answered all the questions, they will see the number of questions they answered correctly.  
-
  """
 
 
