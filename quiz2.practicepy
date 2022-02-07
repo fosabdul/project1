@@ -1,4 +1,4 @@
-""" A quiz program. """
+""" A quiz program This practice to see other ways that I could run this code shorter """
 
 total_score = 0
 
