@@ -50,8 +50,8 @@ def main():
         user_answer = input(question + " ")  # this is confusing to read - better variable names would hlep 
         # if the answer is correct then total_score increases by 1
         correct_answer = topic_questions[question]
-        if user_answer.lower( )== correct_answer.lower(): # be consistent with spacing around operators 
-            total_score=total_score+1
+        if user_answer.lower() == correct_answer.lower(): # be consistent with spacing around operators 
+            total_score = total_score+1
             print('Your answer is correct ')
         else:# otherwise it prints the correct answer
             print('The correct answer was ', correct_answer)
