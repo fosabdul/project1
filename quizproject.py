@@ -19,47 +19,34 @@ questions = { 'art':{'Who painted the Mona Lisa?':'Leonardo Da Vinci',
 # it returns the name of the topic if it exists
 # otherwise it returns False
 def pickQuiz():
+
     print('Please Choose the topics from the following :  ')
     for list_of_topics in questions:
         print(list_of_topics)   # you will see all the topics in list 
     
-    
-    print('-----------------------------------------------')
-    topic = input('Would you like art, or space questions? ')
-    if topic in questions:   # if you have the chosen topic in the questions dictionary  
-        return topic
-    else:
-        return False
-
 
 def main():
-    #It is the variable to hold the number of correct answers given by the user
+   
     total_score = 0
-    status=pickQuiz()
+    topic = input('Would you like art, or space questions? ')
     
-    # if the user chooses the topic that does exist
-    # the questions are displayed from the chosen topic
-    if status!=False:
-        test=questions[status]
-        # This for loop displays the questions from the chosen topic
+    topic_questions = questions[topic]   
+    
+    for question in topic_questions:  
+        user_answer = input(question + " ")  
+        correct_answer = topic_questions[question]
+
+        if user_answer.lower() == correct_answer.lower(): 
+            total_score = total_score+1
+            print('Your answer is correct ')
+        else:
+            print('The correct answer was ', correct_answer)
+
+    
+    print(f'Your total score is {total_score} out of {len(topic_questions)} ')  
+    print('You chose incorrect topic')
+
         
-        for i in test:
-            x=input(i+" ")
-            # if the answer is correct then total_score increases by 1
-            if x.lower()==test[i].lower():
-                total_score=total_score+1
-                print('Your answer is correct ')
-            else:# otherwise it prints the correct answer
-                print('The correct answer was ',test[i])
-        # At the end it prints the total Score out of 3
-        print(f'Your total score is {total_score} out of 3 ')
-    
-    
-    else:
-        print('You chose incorrect topic')
-
-        # if the user chose another than the topic in the dictionary.
-
 
 
 
