@@ -20,23 +20,29 @@ questions = { 'art':{'Who painted the Mona Lisa?':'Leonardo Da Vinci',
 # otherwise it returns False
 def pickQuiz():
     print('Please Choose the topics from the following :  ')
-    for i in questions:
-        print(i)
+    for list_of_topics in questions:
+        print(list_of_topics)   # you will see all the topics in list 
+    
+    
     print('-----------------------------------------------')
     topic = input('Would you like art, or space questions? ')
-    if topic in questions:
+    if topic in questions:   # if you have the chosen topic in the questions dictionary  
         return topic
     else:
         return False
+
+
 def main():
     #It is the variable to hold the number of correct answers given by the user
     total_score = 0
     status=pickQuiz()
+    
     # if the user chooses the topic that does exist
     # the questions are displayed from the chosen topic
     if status!=False:
         test=questions[status]
         # This for loop displays the questions from the chosen topic
+        
         for i in test:
             x=input(i+" ")
             # if the answer is correct then total_score increases by 1
@@ -47,8 +53,15 @@ def main():
                 print('The correct answer was ',test[i])
         # At the end it prints the total Score out of 3
         print(f'Your total score is {total_score} out of 3 ')
+    
+    
     else:
         print('You chose incorrect topic')
 
         # if the user chose another than the topic in the dictionary.
+
+
+
+
+
 main()
